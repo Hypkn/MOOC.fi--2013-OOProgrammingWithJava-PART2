@@ -9,9 +9,9 @@ public class Main {
 
         // Start your program here
         // ATTENTION: In your program, you can create only one instance of class Scanner!
-        Scanner reader = new Scanner(System.in);
+        
 
-        Interface menu = new Interface(reader);
+        Interface menu = new Interface();
         menu.start();
     }
 }
