@@ -9,9 +9,15 @@ public class Main {
 
         // Start your program here
         // ATTENTION: In your program, you can create only one instance of class Scanner!
+<<<<<<< HEAD
         Scanner reader = new Scanner(System.in);
 
         Interface menu = new Interface(reader);
+=======
+        
+
+        Interface menu = new Interface();
+>>>>>>> 7b121a0e4b6362b3f8aa46ef92064256748ffa09
         menu.start();
     }
 }
