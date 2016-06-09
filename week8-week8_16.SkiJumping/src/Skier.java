@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+
+import java.util.Random;
+=======
 import java.util.HashMap;
 import java.util.Map;
+>>>>>>> 7b121a0e4b6362b3f8aa46ef92064256748ffa09
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,6 +16,13 @@ import java.util.Map;
  *
  * @author dev
  */
+<<<<<<< HEAD
+public class Skier {
+
+    private String name;
+    private String jumpLength;
+    private Random rand;
+=======
 public class Skier implements Comparable<Skier> {
     private String name;
     private Map<Integer, Result> results;
@@ -19,10 +31,28 @@ public class Skier implements Comparable<Skier> {
         this.name = name;
         this.results = new HashMap<Integer, Result>();
     }
+>>>>>>> 7b121a0e4b6362b3f8aa46ef92064256748ffa09
 
     public String getName() {
         return name;
     }
+<<<<<<< HEAD
+
+    public void setName(String name) {
+        this.name = name;
+        
+    }
+
+    public String getJumpLength() {
+        return jumpLength;
+    }
+
+    public void setJumpLength(String jumpLength) {
+        this.jumpLength = jumpLength;
+    }
+
+}
+=======
     
     public int getPoint() {
         int point = 0;
@@ -56,3 +86,4 @@ public class Skier implements Comparable<Skier> {
     
     
 }
+>>>>>>> 7b121a0e4b6362b3f8aa46ef92064256748ffa09

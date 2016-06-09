@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+
+import java.util.ArrayList;
+import java.util.List;
+=======
+>>>>>>> 7b121a0e4b6362b3f8aa46ef92064256748ffa09
 import java.util.Random;
 
 /*
@@ -11,6 +17,41 @@ import java.util.Random;
  * @author dev
  */
 public class Result {
+<<<<<<< HEAD
+    
+    private int roundNumber;
+    private Random rand = new Random();
+    private List<Skier>skier;
+    private List<Integer>judges = new ArrayList<Integer>();
+    
+    public Result(){
+        roundNumber = 1;
+    }
+    
+    
+    public void roundStart(){
+        
+        System.out.println("Round " + roundNumber);
+        roundNumber++;
+        
+        System.out.println("Jumping order: ");
+        
+        System.out.println("judge votes: " + judges);
+        
+    }
+    
+    public void votes(){
+        for(int i = 0; i < 5; i++){
+            int randomVotes = rand.nextInt(20-10 +1);
+            
+            judges.add(randomVotes);
+            
+        }
+        //return judges;
+    }
+    
+}
+=======
     private int length;
     private int[] votes;
     private Random randomGenerator = new Random();
@@ -68,3 +109,4 @@ public class Result {
 	return min;
     }
 }
+>>>>>>> 7b121a0e4b6362b3f8aa46ef92064256748ffa09

@@ -5,7 +5,10 @@
  */
 package PhoneSearch.ui;
 
+<<<<<<< HEAD
+=======
 import PhoneSearch.logic.PhoneBook;
+>>>>>>> 7b121a0e4b6362b3f8aa46ef92064256748ffa09
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -20,6 +23,73 @@ import java.util.Set;
  */
 public class Interface {
 
+<<<<<<< HEAD
+    private Scanner reader;
+   
+
+    public Interface(Scanner reader) {
+        this.reader = reader;
+        
+
+    }
+
+    public void start() {
+
+        System.out.println("phone search");
+        System.out.println("available operations:");
+        System.out.println(" 1 add a number");
+        System.out.print(" 2 search for a number\n"
+                + " 3 search for a person by phone number\n"
+                + " 4 add an address\n"
+                + " 5 search for personal information\n"
+                + " 6 delete personal information\n"
+                + " 7 filtered listing\n"
+                + " x quit\n\n");
+
+        while (true) {
+
+            System.out.print("command: ");
+            String input = reader.nextLine();
+            if (input.equalsIgnoreCase("x")) {
+                break;
+            }
+
+            if (input.equals("1")) {
+                addNumber();
+
+            }
+
+            if (input.equals("2")) {
+                searchNumber();
+            }
+
+        }
+    }
+    
+    System.out.print("whose number: ");
+
+        String name = reader.nextLine();
+        System.out.print("number: ");
+        String number = reader.nextLine();
+        this.phoneBook.put(name, new ArrayList<String>());
+
+        this.phoneBook.get(name).add(number);
+        System.out.println("");
+
+ 
+    }
+
+ System.out.print("whose number: ");
+        String name = reader.nextLine();
+        if (!phoneBook.containsKey(name)) {
+            System.out.println("not found");
+        } else {
+
+            System.out.println(phoneBook.get(name));
+        }
+
+}
+=======
     String testinput = "1\npekka\n040-123456\n2\njukka\n2\npekka\n040-123456\n1\npekka\n09-222333\n2\npekka\n3\n02-444123\n3\n09-222333\n5\npekka\n4\npekka\nida ekamanintie\nhelsinki\n5\npekka\n4\njukka\nkorsontie\nvantaa\n5\njukka\n7\nkk\n7\nvantaa\n7\nseppo\n6\njukka\n5\njukka\nx\n";
     private Scanner reader = new Scanner(System.in);
     
@@ -123,3 +193,4 @@ public class Interface {
     
     
 
+>>>>>>> 7b121a0e4b6362b3f8aa46ef92064256748ffa09
