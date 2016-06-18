@@ -1,5 +1,6 @@
 package movingfigure;
 
+import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
 import javax.swing.*;
@@ -31,9 +32,13 @@ public class UserInterface implements Runnable {
     private void createComponents(Container container) {
         DrawingBoard board = new DrawingBoard(figure);
         container.add(board);
+        frame.addKeyListener(new KeyboardListener(container, figure));
     }
 
     private void addListeners() {
+        
+        KeyboardListener listener  = new KeyboardListener(container, figure);
+        
     }
 
     public JFrame getFrame() {
