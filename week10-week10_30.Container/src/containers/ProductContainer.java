@@ -30,16 +30,11 @@ public class ProductContainer extends Container {
         return this.productName;
     }
     
-<<<<<<< HEAD
-    
-=======
+
   
     
-     public void setName(String newName) {
-        this.productName = newName;
-    }
->>>>>>> f0ef54ffb5fa2f7846283edc55c00a46976e5965
     
+
     @Override
     public String toString(){
         return this.productName + (": ")+  super.toString();
