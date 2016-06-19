@@ -1,5 +1,6 @@
 package movingfigure;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
@@ -9,9 +10,9 @@ public class UserInterface implements Runnable {
 
     private JFrame frame;
     private Figure figure;
-    
-    
-    public UserInterface(Figure figure){
+    private DrawingBoard board;
+
+    public UserInterface(Figure figure) {
         this.figure = figure;
     }
 
@@ -23,22 +24,24 @@ public class UserInterface implements Runnable {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         createComponents(frame.getContentPane());
+
         addListeners();
 
         frame.pack();
         frame.setVisible(true);
+
     }
 
     private void createComponents(Container container) {
-        DrawingBoard board = new DrawingBoard(figure);
+        board = new DrawingBoard(figure);
+
         container.add(board);
-        frame.addKeyListener(new KeyboardListener(container, figure));
+        frame.addKeyListener(new KeyboardListener(board, figure));
+
     }
 
     private void addListeners() {
-        
-        KeyboardListener listener  = new KeyboardListener(container, figure);
-        
+
     }
 
     public JFrame getFrame() {

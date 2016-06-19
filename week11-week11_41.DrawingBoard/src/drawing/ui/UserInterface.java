@@ -18,6 +18,7 @@ public class UserInterface implements Runnable {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         createComponents(frame.getContentPane());
+        frame.getContentPane().setBackground(Color.CYAN);
 
         frame.pack();
         frame.setVisible(true);

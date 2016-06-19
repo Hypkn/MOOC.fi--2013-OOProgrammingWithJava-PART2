@@ -18,7 +18,7 @@ public class DrawingBoard extends JPanel {
     private Figure figure;
 
     public DrawingBoard(Figure figure) {
-        super.setBackground(Color.WHITE);
+        super.setBackground(Color.YELLOW);
         this.figure = figure;
 
     }

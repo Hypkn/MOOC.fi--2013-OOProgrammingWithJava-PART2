@@ -13,40 +13,41 @@ import java.awt.event.KeyListener;
  *
  * @author dev
  */
-public class KeyboardListener implements KeyListener{
-    
+public class KeyboardListener implements KeyListener {
+
     private Figure figure;
     private Component component;
 
-    public KeyboardListener(Component component, Figure figure){
+    public KeyboardListener(Component component, Figure figure) {
         this.figure = figure;
         this.component = component;
     }
+
     @Override
     public void keyTyped(KeyEvent ke) {
-       
+
     }
 
     @Override
     public void keyPressed(KeyEvent ke) {
-        if(ke.getKeyCode() == KeyEvent.VK_LEFT){
-            figure.move(-5, 0);
-        }else if(ke.getKeyCode() == KeyEvent.VK_RIGHT){
-            figure.move(5, 0);
-        }else if(ke.getKeyCode() == KeyEvent.VK_UP){
-            figure.move(0, -5);
-        }else if(ke.getKeyCode() == KeyEvent.VK_DOWN){
-            figure.move(0, 5);
-        
-        
-       
+        System.out.println("Keystroke " + ke.getKeyCode() + " pressed.");
+
+        if (ke.getKeyCode() == KeyEvent.VK_LEFT) {
+            figure.move(-1, 0);
+        } else if (ke.getKeyCode() == KeyEvent.VK_RIGHT) {
+            figure.move(1, 0);
+        } else if (ke.getKeyCode() == KeyEvent.VK_UP) {
+            figure.move(0, -1);
+        } else if (ke.getKeyCode() == KeyEvent.VK_DOWN) {
+            figure.move(0, 1);
+
+        }
         component.repaint();
-    }
     }
 
     @Override
     public void keyReleased(KeyEvent ke) {
-        
+
     }
-    
+
 }
