@@ -12,13 +12,13 @@ public class Main {
     }
     
     public static boolean isAWeekDay(String string){
-        Scanner reader = new Scanner(System.in);
+        
          
         System.out.print("Give a string: ");
-       String day = reader.nextLine();
+       
         
         
-        if(day.matches("mon|tue|wed|thu|fri|sat|sun")){
+        if(string.matches("mon|tue|wed|thu|fri|sat|sun")){
             System.out.println("The form is fine");
         return true;
     }
@@ -31,7 +31,7 @@ public class Main {
          
         System.out.println("Give a string: " + string);
        
-        if(string.matches("^[aeiyou]+$")){
+        if(string.matches("^[aeiouäö]+$")){
        System.out.println("The form is fine");
         return true;
     }

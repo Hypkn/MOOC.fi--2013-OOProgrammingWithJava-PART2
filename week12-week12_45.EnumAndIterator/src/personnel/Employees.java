@@ -42,8 +42,10 @@ public class Employees {
         
         while(iterator.hasNext()){
             Person nextEmployee = iterator.next();
+            if(nextEmployee.getEducation() == education){
             System.out.println(nextEmployee);
             
+        }
         }
     }
     

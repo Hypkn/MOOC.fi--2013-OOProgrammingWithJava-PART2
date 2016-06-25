@@ -13,7 +13,7 @@ public class Person {
     
     private String name;
     private Education title;
-    private Education education;
+    
     
     public Person(String name, Education title){
         this.name = name;
@@ -21,7 +21,7 @@ public class Person {
     }
     
     public Education getEducation(){
-        return education;
+        return title;
     }
     
     @Override
